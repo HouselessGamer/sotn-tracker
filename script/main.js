@@ -336,9 +336,9 @@ function updateGridItem(row, index) {
         if (!item || item == 'blank') {
             itemGrid[row][index]['item'].style.backgroundImage = 'url(images/blank.png)';
         } else if ((typeof items[item]) == 'boolean') {
-            itemGrid[row][index]['item'].style.backgroundImage = 'url(images/' + item + '.png)';
+            itemGrid[row][index]['item'].style.backgroundImage = 'url(images/' + item + '.webp)';
         } else {
-            itemGrid[row][index]['item'].style.backgroundImage = 'url(images/' + item + itemsMax[item] + '.png)';
+            itemGrid[row][index]['item'].style.backgroundImage = 'url(images/' + item + itemsMax[item] + '.webp)';
         }
 
         itemGrid[row][index]['item'].style.border = '1px solid white';
@@ -356,9 +356,9 @@ function updateGridItem(row, index) {
     }
 
     if ((typeof items[item]) == 'boolean') {
-        itemGrid[row][index]['item'].style.backgroundImage = 'url(images/' + item + '.png)';
+        itemGrid[row][index]['item'].style.backgroundImage = 'url(images/' + item + '.webp)';
     } else {
-        itemGrid[row][index]['item'].style.backgroundImage = 'url(images/' + item + items[item] + '.png)';
+        itemGrid[row][index]['item'].style.backgroundImage = 'url(images/' + item + items[item] + '.webp)';
     }
 
     itemGrid[row][index]['item'].className = 'griditem ' + !!items[item];
@@ -598,9 +598,9 @@ function populateItemconfig() {
         rowitem.style.backgroundSize = '100% 100%';
         rowitem.onclick = new Function('itemConfigClick(this)');
         if ((typeof items[key]) == 'boolean') {
-            rowitem.style.backgroundImage = 'url(images/' + key + '.png)';
+            rowitem.style.backgroundImage = 'url(images/' + key + '.webp)';
         } else {
-            rowitem.style.backgroundImage = 'url(images/' + key + itemsMax[key] + '.png)';
+            rowitem.style.backgroundImage = 'url(images/' + key + itemsMax[key] + '.webp)';
         }
         row.appendChild(rowitem);
     }		
@@ -619,11 +619,11 @@ function preloader() {
     for (item in items) {
         if ((typeof items[item]) == 'boolean') {
             var img = new Image();
-            img.src = 'images/' + item + '.png';
+            img.src = 'images/' + item + '.webp';
         } else {
             for (i = itemsMin[item]; i < itemsMax[item]; i++) {
                 var img = new Image();
-                img.src = 'images/' + item + i + '.png';
+                img.src = 'images/' + item + i + '.webp';
             }
         }
     }

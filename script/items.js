@@ -24,10 +24,17 @@ var defaultItemGrid = [
 
 var baseItems = {
     SoulOfWolf: false,
-    FormOfMist: false,
-    PowerOfMist: false,
+    PowerOfWolf: false,
+    SkillOfWolf: false,
+
     SoulOfBat: false,
     EchoOfBat: false,
+    FireOfBat: false,
+    ForceOfEcho: false,
+
+    FormOfMist: false,
+    PowerOfMist: false,
+    GasCloud: false,
 
     JewelOfOpen: false,
     LeapStone: false,
@@ -39,6 +46,18 @@ var baseItems = {
     RibOfVlad: false,
     RingOfVlad: false,
     ToothOfVlad: false,
+
+    CubeOfZoe: false,
+    FaerieScroll: false,
+    HolySymbol: false,
+    SpiritOrb: false,
+
+    FaerieCard: false,
+    BatCard: false,
+    DemonCard: false,
+    GhostCard: false,
+    SwordCard: false,
+
 
     blank: false
 };
