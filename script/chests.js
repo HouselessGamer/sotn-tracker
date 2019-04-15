@@ -126,7 +126,7 @@ var chests = [
         y: "27.4%",
         isAvailable: function() {
             if ((items.GravityBoots && items.LeapStone && items.FormOfMist) || 
-                (items.GravityBoots && items.LeapStone && items.FromOfWolf) || 
+                (items.GravityBoots && items.LeapStone && items.SoulOfWolf) || 
                 (items.SoulOfBat) ||
                 (items.FormOfMist && items.PowerOfMist)) {
                 return "available";

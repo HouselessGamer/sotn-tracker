@@ -99,11 +99,11 @@ label {
 }
 
 .true{
-    opacity: 1;
 }
 
 .false{
-    opacity: 0.35;
+    -webkit-filter: grayscale(50%) brightness(50%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(50%) brightness(50%);
 }
 
 .mini{

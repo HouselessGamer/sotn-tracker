@@ -642,3 +642,7 @@ function addLoadEvent(func) {
     }
 }
 addLoadEvent(preloader);
+
+function setBGColor(sender) {
+    document.body.style.backgroundColor = sender.value
+}
