@@ -248,9 +248,9 @@ function addItemRow() {
     itemGrid[r]['row'] = document.createElement('table');
     itemGrid[r]['row'].className = 'tracker';
 
-    var table_row = document.createElement('tr')
-    table_row.appendChild(itemGrid[r]['row']);
-    sender.appendChild(table_row);
+    itemGrid[r]['tablerow'] = document.createElement('tr')
+    itemGrid[r]['tablerow'].appendChild(itemGrid[r]['row']);
+    sender.appendChild(itemGrid[r]['tablerow']);
 
     var tr = document.createElement('tr');
     itemGrid[r]['row'].appendChild(tr);
@@ -277,7 +277,7 @@ function removeItemRow() {
     var sender = document.getElementById('itemdiv')
     var r = itemLayout.length - 1;
 
-    sender.removeChild(itemGrid[r]['row'])
+    sender.removeChild(itemGrid[r]['tablerow'])
     itemGrid.splice(r, 1);
     itemLayout.splice(r, 1);
 
@@ -351,7 +351,7 @@ function updateGridItem(row, index) {
         }
 
         itemGrid[row][index]['item'].style.border = '1px solid white';
-
+        itemGrid[row][index]['item'].className = 'griditem true'
         return;
     }
 
