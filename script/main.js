@@ -35,6 +35,7 @@ var cookieDefault = {
     iZoom: 100,
     mZoom: 100,
     mPos: 0,
+    mOrien: 'row',
     items: defaultItemGrid,
     obtainedItems: items,
     chests: serializeChests(),
@@ -63,6 +64,7 @@ function loadCookie() {
 
     updateGridItemAll();
 
+    document.getElementsByName('maporientation')[0].value = cookieobj.mOrien;
     document.getElementsByName('showmap')[0].checked = !!cookieobj.map;
     document.getElementsByName('showmap')[0].onchange();
     document.getElementsByName('itemdivsize')[0].value = cookieobj.iZoom;
@@ -90,6 +92,7 @@ function saveCookie() {
     cookieobj.mZoom = document.getElementsByName('mapflexsize')[0].value;
 
     cookieobj.mPos = document.getElementsByName('mapposition')[1].checked ? 1 : 0;
+    cookieobj.mOrien = document.getElementsByName('maporientation')[0].value;
 
     cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
     cookieobj.obtainedItems = JSON.parse(JSON.stringify(items));
