@@ -67,8 +67,8 @@ function loadCookie() {
     document.getElementsByName('showmap')[0].onchange();
     document.getElementsByName('itemdivsize')[0].value = cookieobj.iZoom;
     document.getElementsByName('itemdivsize')[0].onchange();
-    document.getElementsByName('mapdivsize')[0].value = cookieobj.mZoom;
-    document.getElementsByName('mapdivsize')[0].onchange();
+    document.getElementsByName('mapflexsize')[0].value = cookieobj.mZoom;
+    document.getElementsByName('mapflexsize')[0].onchange();
 
     document.getElementsByName('mapposition')[cookieobj.mPos].click();
 
@@ -87,7 +87,7 @@ function saveCookie() {
 
     cookieobj.map = document.getElementsByName('showmap')[0].checked ? 1 : 0;
     cookieobj.iZoom = document.getElementsByName('itemdivsize')[0].value;
-    cookieobj.mZoom = document.getElementsByName('mapdivsize')[0].value;
+    cookieobj.mZoom = document.getElementsByName('mapflexsize')[0].value;
 
     cookieobj.mPos = document.getElementsByName('mapposition')[1].checked ? 1 : 0;
 
@@ -161,6 +161,12 @@ function setOrder(H) {
 }
 
 
+function setMapOrientation(orientaion) {
+    document.getElementById("mapflex").style.flexDirection = orientaion;
+    saveCookie();
+}
+
+
 function setZoom(target, sender) {
     document.getElementById(target).style.zoom = sender.value / 100;
     document.getElementById(target).style.zoom = sender.value / 100;
@@ -180,7 +186,7 @@ function showSettings(sender) {
 
         editmode = false;
         updateGridItemAll();
-        showTracker('mapdiv', document.getElementsByName('showmap')[0]);
+        showTracker('mapflex', document.getElementsByName('showmap')[0]);
         document.getElementById('itemconfig').style.display = 'none';
         document.getElementById('rowButtons').style.display = 'none';
         sender.innerHTML = '🔧';
@@ -213,7 +219,7 @@ function EditMode() {
 
     editmode = true;
     updateGridItemAll();
-    showTracker('mapdiv', {checked: false});
+    showTracker('mapflex', {checked: false});
     document.getElementById('settings').style.display = 'none';
     document.getElementById('itemconfig').style.display = '';
     document.getElementById('rowButtons').style.display = 'flex';
@@ -502,7 +508,8 @@ function itemConfigClick (sender) {
 
 
 function populateMapdiv() {
-    var mapdiv = document.getElementById('mapdiv');
+    var mapdiv1 = document.getElementById('mapdiv1');
+    var mapdiv2 = document.getElementById('mapdiv2');
 
     // Initialize all chests on the map
     for (k = 0; k < chests.length; k++) {
@@ -512,7 +519,7 @@ function populateMapdiv() {
         s.id = k;
         s.onclick = new Function('toggleChest(' + k + ')');
         s.onmouseover = new Function('highlight(' + k + ')');
-        s.onmouseout = new Function('unhighlight(' + k + ')');
+        s.onmouseout = new Function('unhighlight(' + k + ')');       
         s.style.left = chests[k].x;
         s.style.top = chests[k].y;
         if (chests[k].isOpened) {
@@ -526,7 +533,11 @@ function populateMapdiv() {
         ss.innerHTML = chests[k].name;
         s.appendChild(ss);
 
-        mapdiv.appendChild(s);
+        if (chests[k].map == 1) {
+            mapdiv1.appendChild(s);
+        } else {
+            mapdiv2.appendChild(s);            
+        }
     }
 }
 

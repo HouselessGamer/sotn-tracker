@@ -141,14 +141,19 @@ label {
 }
 
 .mapdiv{
-    background-image: url("images/map.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
     position: relative;
-    width: 918px;
+    width: 459px;
     height: 362px;
+}
+
+.mapflex{
+    display: flex;
     left: 0px;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 

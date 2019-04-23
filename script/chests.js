@@ -29,8 +29,9 @@ function generalCanGetChest(chestlist) {
 var chests = [
     {
         name: "Power Of Wolf",
-        x: "01.3%",
+        x: "02.6%",
         y: "70.5%",
+        map: 1,
         isAvailable: function() {
             if ((items.SoulOfBat) || 
                 (items.LeapStone && items.GravityBoots) ||
@@ -42,8 +43,9 @@ var chests = [
     },
     {
         name: "Merman Statue",
-        x: "05.3%",
+        x: "10.6%",
         y: "79.5%",
+        map: 1,
         isAvailable: function() {
             if (items.JewelOfOpen) {
                 return "available";
@@ -53,16 +55,18 @@ var chests = [
     },    
     {
         name: "Cube Of Zoe",
-        x: "13.9%",
+        x: "27.8%",
         y: "68.2%",
+        map: 1,
         isAvailable: function() {
             return "available";
         },
     },
     {
         name: "Skill Of Wolf",
-        x: "11.0%",
+        x: "22.0%",
         y: "61.2%",
+        map: 1,
         isAvailable: function() {
             if ((items.GravityBoots) || 
                 (items.SoulOfBat) ||
@@ -74,8 +78,9 @@ var chests = [
     },
     {
         name: "Bat Card",
-        x: "9.2%",
+        x: "18.4%",
         y: "49.0%",
+        map: 1,
         isAvailable: function() {
             if ((items.GravityBoots) || 
                 (items.SoulOfBat) ||
@@ -87,16 +92,18 @@ var chests = [
     },
     {
         name: "Spirit Orb",
-        x: "19.2%",
+        x: "38.4%",
         y: "57.0%",
+        map: 1,
         isAvailable: function() {
             return "available";
         },
     },
     {
         name: "Form Of Mist",
-        x: "15.8%",
+        x: "31.6%",
         y: "39.5%",
+        map: 1,
         isAvailable: function() {
             if ((items.GravityBoots) || 
                 (items.SoulOfBat) ||
@@ -109,8 +116,9 @@ var chests = [
     },
     {
         name: "Sword Card",
-        x: "15.2%",
+        x: "30.4%",
         y: "31.5%",
+        map: 1,
         isAvailable: function() {
             if ((items.GravityBoots && items.LeapStone) || 
                 (items.SoulOfBat) ||
@@ -122,8 +130,9 @@ var chests = [
     },
     {
         name: "Echo Of Bat",
-        x: "12.2%",
+        x: "24.4%",
         y: "27.4%",
+        map: 1,
         isAvailable: function() {
             if ((items.GravityBoots && items.LeapStone && items.FormOfMist) || 
                 (items.GravityBoots && items.LeapStone && items.SoulOfWolf) || 
@@ -136,8 +145,9 @@ var chests = [
     },
     {
         name: "Gravity Boots",
-        x: "26.2%",
+        x: "52.4%",
         y: "41.2%",
+        map: 1,
         isAvailable: function() {
             if ((items.GravityBoots && items.LeapStone) || 
                 (items.SoulOfBat) ||
@@ -149,8 +159,9 @@ var chests = [
     },
     {
         name: "Leap Stone",
-        x: "24.0%",
+        x: "48.0%",
         y: "17.0%",
+        map: 1,
         isAvailable: function() {
             if ((items.GravityBoots) || 
                 (items.LeapStone) ||
@@ -164,8 +175,9 @@ var chests = [
     },
     {
         name: "Power Of Mist",
-        x: "24.0%",
+        x: "48.0%",
         y: "13.0%",
+        map: 1,
         isAvailable: function() {
             if ((items.GravityBoots && items.LeapStone) || 
                 (items.SoulOfBat) ||
@@ -177,8 +189,9 @@ var chests = [
     },
     {
         name: "Ghost Card",
-        x: "30.2%",
+        x: "60.4%",
         y: "8.5%",
+        map: 1,
         isAvailable: function() {
             if ((items.GravityBoots && items.LeapStone) || 
                 (items.SoulOfBat) ||
@@ -190,8 +203,9 @@ var chests = [
     },
     {
         name: "Fire Of Bat",
-        x: "46.0%",
+        x: "92.0%",
         y: "16.8%",
+        map: 1,
         isAvailable: function() {
             if ((items.GravityBoots && items.LeapStone) || 
                 (items.SoulOfBat) ||
@@ -203,8 +217,9 @@ var chests = [
     },
     {
         name: "Soul of Bat",
-        x: "36.8%",
+        x: "73.6%",
         y: "37.4%",
+        map: 1,
         isAvailable: function() {
             if ((items.FormOfMist && items.GravityBoots) || 
                 (items.FormOfMist && items.LeapStone) ||
@@ -216,8 +231,9 @@ var chests = [
     },
     {
         name: "Faerie Card",
-        x: "40.5%",
+        x: "81.0%",
         y: "31.0%",
+        map: 1,
         isAvailable: function() {
             if ((items.GravityBoots) || 
                 (items.SoulOfBat) ||
@@ -229,32 +245,36 @@ var chests = [
     },
     {
         name: "Jewel Of Open",
-        x: "38.5%",
+        x: "77.0%",
         y: "35.6%",
+        map: 1,
         isAvailable: function() {
             return "available";
         },
     },
     {
         name: "Faerie Scroll",
-        x: "45.5%",
+        x: "91.0%",
         y: "31.0%",
+        map: 1,
         isAvailable: function() {
             return "available";
         },
     },
     {
         name: "Soul Of Wolf",
-        x: "47.8%",
+        x: "95.6%",
         y: "31.5%",
+        map: 1,
         isAvailable: function() {
             return "available";
         },
     },
     {
         name: "Holy Symbol",
-        x: "42.6%",
+        x: "85.2%",
         y: "78.2%",
+        map: 1,
         isAvailable: function() {
             if (items.JewelOfOpen && items.MermanStatue) {
                 return "available";
@@ -264,8 +284,9 @@ var chests = [
     },
     {
         name: "Demon Card",
-        x: "21.6%",
+        x: "43.2%",
         y: "83.6%",
+        map: 1,
         isAvailable: function() {
             if ((items.JewelOfOpen && items.SoulOfBat) || 
                 (items.JewelOfOpen && items.LeapStone) ||
@@ -278,8 +299,9 @@ var chests = [
 
     {
         name: "Gas Cloud",
-        x: "86.9%",
+        x: "73.8%",
         y: "04.6%",
+        map: 2,
         isAvailable: function() {
             if (items.JewelOfOpen && items.SoulOfBat && items.FormOfMist && items.EchoOfBat) {
                 return "available";
@@ -289,8 +311,9 @@ var chests = [
     },
     {
         name: "Force Of Echo",
-        x: "56.9%",
+        x: "13.8%",
         y: "22.0%",
+        map: 2,
         isAvailable: function() {
             if (items.JewelOfOpen && items.SoulOfBat && items.FormOfMist && items.EchoOfBat) {
                 return "available";
@@ -300,8 +323,9 @@ var chests = [
     },
     {
         name: "Eye Of Vlad",
-        x: "77.4%",
+        x: "54.8%",
         y: "24.5%",
+        map: 2,
         isAvailable: function() {
             if (items.JewelOfOpen && items.SoulOfBat && items.FormOfMist && items.EchoOfBat) {
                 return "available";
@@ -311,8 +335,9 @@ var chests = [
     },
     {
         name: "Tooth Of Vlad",
-        x: "54.8%",
+        x: "09.6%",
         y: "58.5%",
+        map: 2,
         isAvailable: function() {
             if (items.JewelOfOpen && items.SoulOfBat && items.FormOfMist && items.EchoOfBat) {
                 return "available";
@@ -322,8 +347,9 @@ var chests = [
     },
     {
         name: "Ring Of Vlad",
-        x: "68.4%",
+        x: "36.8%",
         y: "84.8%",
+        map: 2,
         isAvailable: function() {
             if (items.JewelOfOpen && items.SoulOfBat && items.FormOfMist && items.EchoOfBat) {
                 return "available";
@@ -333,8 +359,9 @@ var chests = [
     },
     {
         name: "Heart Of Vlad",
-        x: "81.7%",
+        x: "63.4%",
         y: "78.8%",
+        map: 2,
         isAvailable: function() {
             if (items.JewelOfOpen && items.SoulOfBat && items.FormOfMist && items.EchoOfBat) {
                 return "available";
@@ -344,8 +371,9 @@ var chests = [
     },
     {
         name: "Rib Of Vlad",
-        x: "84.9%",
+        x: "69.8%",
         y: "71.8%",
+        map: 2,
         isAvailable: function() {
             if (items.JewelOfOpen && items.SoulOfBat && items.FormOfMist && items.EchoOfBat) {
                 return "available";
@@ -353,9 +381,5 @@ var chests = [
             return "unavailable";
         },
     },
-
-
-
-
 ]
 
